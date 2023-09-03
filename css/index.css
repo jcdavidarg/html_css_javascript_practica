@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "Minerva Modern Black";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/MinervaModern\ Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Tribal";
+  src: url("../fonts/tribal.ttf");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  color: #ffffff;
+  font-family: "Minerva Modern Black", sans-serif;
+  background-color: #232222;
+}
+
+header,
+footer {
+  color: #c4bfbf;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.8em;
+}
+
+h1 {
+  font-family: "Tribal";
+  font-size: 3em;
+}
+
+.nav__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ul__header {
+  display: flex;
+  gap: 1.5em;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
