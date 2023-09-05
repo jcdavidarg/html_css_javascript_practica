@@ -10,6 +10,43 @@
   src: url("../fonts/tribal.ttf");
 }
 
+:root {
+  /* Palette */
+  --primary-solid: #856032;
+  --primary-color-900: rgb(133, 96, 50), 0.9;
+  --primary-color-500: rgb(133, 96, 50), 0.5;
+  --primary-color-300: rgb(133, 96, 50), 0.3;
+
+  --secondary-solid: #ca3540;
+  --secondary-color-900: rgb(202, 53, 64), 0.9;
+  --secondary-color-500: rgb(202, 53, 64), 0.5;
+  --secondary-color-300: rgb(202, 53, 64), 0.3;
+
+  --dark-solid: #161616;
+  --dark-900: rgb(22, 22, 22, 0.9);
+  --dark-500: rgb(22, 22, 22, 0.5);
+  --dark-300: rgb(22, 22, 22, 0.3);
+
+  --dark-bg-solid: #232222;
+  --dark-bg-900: rgb(35, 34, 34, 0.9);
+  --light-bg-solid: #fafaff;
+
+  --light-text: #c4bfbf;
+  --light-text-solid: #fafafa;
+
+  /* Typography */
+  --base-font: "Minerva Modern Black", sans-serif;
+  --blood-font: "Tribal";
+
+  /* Font-sizes */
+  --font-display: 4em;
+  --font-jumbo: 3.5em;
+  --font-xlarge: 2.8em;
+  --font-large: 2.4em;
+  --font-medium: 1.8em;
+  --font-small: 1.5em;
+}
+
 *,
 *::before,
 *::after {
@@ -20,14 +57,17 @@
 
 html {
   font-size: 62.5%;
-  color: #ffffff;
-  font-family: "Minerva Modern Black", sans-serif;
-  background-color: #232222;
+  color: var(--light-text);
+  font-family: var(--base-font);
+  background-color: var(--dark-solid);
+  /* background-image: url("../img/Bloodlife2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
-header,
-footer {
-  color: #c4bfbf;
+header {
+  padding: 1.5rem 3rem;
+  background-color: var(--dark-bg-solid);
 }
 
 ul,
@@ -38,22 +78,24 @@ ol {
 a {
   text-decoration: none;
   color: inherit;
-  font-size: 2em;
+  font-size: var(--font-small);
 }
 
 p {
-  font-size: 1.8em;
+  font-size: var(--font-medium);
 }
 
 h1 {
-  font-family: "Tribal";
-  font-size: 3em;
+  font-family: var(--blood-font);
+  font-size: var(--font-xlarge);
 }
 
 .nav__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .ul__header {
@@ -61,7 +103,28 @@ h1 {
   gap: 1.5em;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.btn__footer {
+  background-color: var(--boton-footer);
+  color: var(--color-primario);
 }
+
+.banner__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 1.5rem 3rem;
+  background-color: var(--dark-bg-900);
+}
+
+.nav__footer {
+  background-color: var(--dark-900);
+  padding: 1.5rem 3rem;
+}
+
+/* .top__banner {
+  min-height: 100vh;
+  background: url("../img/Bloodlife.jpg") no-repeat center center;
+  background-size: cover;
+} */
